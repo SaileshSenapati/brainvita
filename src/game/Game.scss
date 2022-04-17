@@ -1,0 +1,156 @@
+.g-cntr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .reset {
+    position: absolute;
+    top: 2vh;
+    right: 10vh;
+    border: 1px solid #32680d;
+    background: linear-gradient(0deg, #ff8b8b, #b2b246, #6868ad);
+    box-shadow: 1px 5px 50px 15px #a76262e0, -1px -5px 100px 15px #b2b246;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .reset-btn {
+      font-size: 22px;
+      font-weight: 900;
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: -2px -1px 10px 1px rgba(0, 0, 0, 0.88);
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  .board-round-outer {
+    height: 90vh;
+    width: 90vh;
+    border: 1px solid #32680d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, #ff8b8b, #b2b246, #6868ad);
+    animation: rotatecolours 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    box-shadow: 10px 50px 52px 15px #a76262e0, -10px -50px 100px 15px #b2b246;
+    .board-round-inner {
+      height: 80vh;
+      width: 80vh;
+      border: 1px solid #f9e800;
+      background: linear-gradient(0deg, #ff8b8b, #b2b246, #6868ad);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: -5px -10px 12px 15px rgba(0, 0, 0, 0.88);
+      .board-hole-cntr {
+        height: 75vh;
+        width: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        table {
+          height: 100%;
+          width: 100%;
+          border-spacing: 10px;
+          .hole {
+            border: 1px solid #18ff3b;
+            border-radius: 50%;
+            cursor: default;
+            background-color: #fff;
+            .marbel {
+              background: linear-gradient(
+                120deg,
+                #000000 10%,
+                #3a3a89,
+                #b4b4e1
+              );
+              border-radius: 50%;
+              height: 100%;
+              width: 100%;
+              cursor: pointer;
+              &:hover {
+                transform: scale(1.1);
+              }
+              box-shadow: -5px -2px 10px 1px rgba(0, 0, 0, 0.88);
+            }
+            .no-marble {
+              height: 100%;
+              width: 100%;
+              border-radius: 50%;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset,
+                0 6px 20px 0 rgba(0, 0, 0, 0.19) inset;
+            }
+            .green-marble {
+              background: linear-gradient(
+                120deg,
+                #4a552b 10%,
+                #5bff00,
+                #d9ded6
+              );
+            }
+          }
+          .hide-hole {
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+  .stop-anim {
+    animation-iteration-count: 1;
+  }
+}
+@keyframes rotatecolours {
+  0% {
+    background: linear-gradient(0deg, #ff8b8b, #b2b246, #6868ad);
+  }
+  8% {
+    background: linear-gradient(30deg, #ff8b8b, #b2b246, #6868ad);
+  }
+  17% {
+    background: linear-gradient(60deg, #ff8b8b, #b2b246, #6868ad);
+  }
+  25% {
+    background: linear-gradient(90deg, #ff8b8b, #b2b246, #6868ad);
+  }
+  33% {
+    background: linear-gradient(120deg, #ff8b8b, #b2b246, #6868ad);
+  }
+  42% {
+    background: linear-gradient(150deg, #ff8b8b, #b2b246, #6868ad);
+  }
+  50% {
+    background: linear-gradient(180deg, #ff8b8b, #b2b246, #6868ad);
+  }
+  58% {
+    background: linear-gradient(210deg, #ff8b8b, #b2b246, #6868ad);
+  }
+  67% {
+    background: linear-gradient(240deg, #ff8b8b, #b2b246, #6868ad);
+  }
+  75% {
+    background: linear-gradient(270deg, #ff8b8b, #b2b246, #6868ad);
+  }
+  83% {
+    background: linear-gradient(300deg, #ff8b8b, #b2b246, #6868ad);
+  }
+  91% {
+    background: linear-gradient(330deg, #ff8b8b, #b2b246, #6868ad);
+  }
+  100% {
+    background: linear-gradient(360deg, #ff8b8b, #b2b246, #6868ad);
+  }
+}
