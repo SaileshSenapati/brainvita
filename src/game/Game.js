@@ -80,57 +80,59 @@ const Game = () => {
     }
   };
   return (
-    <div className="g-cntr">
-      <div className="reset">
-        <div className="reset-btn" onClick={() => resetBoard()}>
-          Reset
+    <section className="scrn-sctn">
+      <div className="g-cntr">
+        <div className="reset">
+          <div className="reset-btn" onClick={() => resetBoard()}>
+            Reset
+          </div>
         </div>
-      </div>
-      <div
-        className={`board-round-outer ${
-          noMarbel.length !== 1 ? "stop-anim" : ""
-        }`}
-      >
-        <div className="board-round-inner">
-          <div className="board-hole-cntr">
-            <table>
-              <tbody>
-                {arr.map((eachRow) => {
-                  return (
-                    <tr key={eachRow}>
-                      {arr.map((eachCol) => {
-                        const holeId = eachRow + "" + eachCol;
-                        return (
-                          <td
-                            key={eachCol}
-                            className={`hole ${
-                              hiddenHoles.includes(holeId) ? "hide-hole" : ""
-                            }`}
-                            onClick={() => handleMarbelClick(holeId)}
-                          >
-                            <div
-                              className={`${
-                                noMarbel.includes(holeId)
-                                  ? "no-marble"
-                                  : "marbel"
-                              } ${
-                                activeMarble && holeId === activeMarble
-                                  ? "green-marble"
-                                  : ""
+        <div
+          className={`board-round-outer ${
+            noMarbel.length !== 1 ? "stop-anim" : ""
+          }`}
+        >
+          <div className="board-round-inner">
+            <div className="board-hole-cntr">
+              <table>
+                <tbody>
+                  {arr.map((eachRow) => {
+                    return (
+                      <tr key={eachRow}>
+                        {arr.map((eachCol) => {
+                          const holeId = eachRow + "" + eachCol;
+                          return (
+                            <td
+                              key={eachCol}
+                              className={`hole ${
+                                hiddenHoles.includes(holeId) ? "hide-hole" : ""
                               }`}
-                            ></div>
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+                              onClick={() => handleMarbelClick(holeId)}
+                            >
+                              <div
+                                className={`${
+                                  noMarbel.includes(holeId)
+                                    ? "no-marble"
+                                    : "marbel"
+                                } ${
+                                  activeMarble && holeId === activeMarble
+                                    ? "green-marble"
+                                    : ""
+                                }`}
+                              ></div>
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

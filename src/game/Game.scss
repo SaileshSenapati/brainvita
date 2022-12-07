@@ -3,13 +3,20 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-image: linear-gradient(
+    140deg,
+    #a5f1e9 0%,
+    #7fe9de 25%,
+    #fff6bf 50%,
+    #ffebad 75%
+  );
   .reset {
     position: absolute;
     top: 2vh;
-    right: 10vh;
+    right: 10vw;
     border: 1px solid #32680d;
-    background: linear-gradient(0deg, #ff8b8b, #b2b246, #6868ad);
-    box-shadow: 1px 5px 50px 15px #a76262e0, -1px -5px 100px 15px #b2b246;
+    background: linear-gradient(0deg, #cff5e7, #a0e4cb, #59c1bd);
+    box-shadow: 1px 5px 50px 15px #a5f1e9, -1px -5px 100px 15px #ffebad;
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -33,28 +40,28 @@
     }
   }
   .board-round-outer {
-    height: 90vh;
-    width: 90vh;
-    border: 1px solid #32680d;
+    border: 5vh solid transparent;
+    outline: 1px solid #f5d5ae;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(0deg, #ff8b8b, #b2b246, #6868ad);
-    animation: rotatecolours 1s;
+    // background: linear-gradient(0, #cff5e7, #a0e4cb, #59c1bd);
+    // animation: rotatecolours 1s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    box-shadow: 10px 50px 52px 15px #a76262e0, -10px -50px 100px 15px #b2b246;
+    box-shadow: 10px 50px 52px 15px #ffebad, -10px -50px 100px 15px #a5f1e9;
     .board-round-inner {
       height: 80vh;
       width: 80vh;
       border: 1px solid #f9e800;
-      background: linear-gradient(0deg, #ff8b8b, #b2b246, #6868ad);
+      background: linear-gradient(0deg, #cff5e7, #a0e4cb, #59c1bd);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       box-shadow: -5px -10px 12px 15px rgba(0, 0, 0, 0.88);
+
       .board-hole-cntr {
         height: 75vh;
         width: 75vh;
@@ -113,44 +120,62 @@
     animation-iteration-count: 1;
   }
 }
+@media only screen and (max-width: 600px) {
+  .g-cntr {
+    height: fit-content;
+    width: fit-content;
+    .reset {
+      height: 60px;
+      width: 60px;
+      .reset-btn {
+        font-size: 14px;
+        height: 45px;
+        width: 45px;
+      }
+    }
+    .board-round-outer {
+      margin-top: 60px;
+    }
+  }
+}
 @keyframes rotatecolours {
   0% {
-    background: linear-gradient(0deg, #ff8b8b, #b2b246, #6868ad);
+    background: linear-gradient(0deg, #cff5e7, #a0e4cb, #59c1bd);
   }
   8% {
-    background: linear-gradient(30deg, #ff8b8b, #b2b246, #6868ad);
+    background: linear-gradient(30deg, #cff5e7, #a0e4cb, #59c1bd);
   }
   17% {
-    background: linear-gradient(60deg, #ff8b8b, #b2b246, #6868ad);
+    background: linear-gradient(60deg, #cff5e7, #a0e4cb, #59c1bd);
   }
   25% {
-    background: linear-gradient(90deg, #ff8b8b, #b2b246, #6868ad);
+    background: linear-gradient(90deg, #cff5e7, #a0e4cb, #59c1bd);
   }
   33% {
-    background: linear-gradient(120deg, #ff8b8b, #b2b246, #6868ad);
+    background: linear-gradient(120deg, #cff5e7, #a0e4cb, #59c1bd);
   }
   42% {
-    background: linear-gradient(150deg, #ff8b8b, #b2b246, #6868ad);
+    background: linear-gradient(150deg, #cff5e7, #a0e4cb, #59c1bd);
   }
   50% {
-    background: linear-gradient(180deg, #ff8b8b, #b2b246, #6868ad);
+    background: linear-gradient(180deg, #cff5e7, #a0e4cb, #59c1bd);
   }
   58% {
-    background: linear-gradient(210deg, #ff8b8b, #b2b246, #6868ad);
+    background: linear-gradient(210deg, #cff5e7, #a0e4cb, #59c1bd);
   }
   67% {
-    background: linear-gradient(240deg, #ff8b8b, #b2b246, #6868ad);
+    background: linear-gradient(240deg, #cff5e7, #a0e4cb, #59c1bd);
   }
   75% {
-    background: linear-gradient(270deg, #ff8b8b, #b2b246, #6868ad);
+    background: linear-gradient(270deg, #cff5e7, #a0e4cb, #59c1bd);
   }
   83% {
-    background: linear-gradient(300deg, #ff8b8b, #b2b246, #6868ad);
+    background: linear-gradient(300deg, #cff5e7, #a0e4cb, #59c1bd);
   }
   91% {
-    background: linear-gradient(330deg, #ff8b8b, #b2b246, #6868ad);
+    background: linear-gradient(330deg, #cff5e7, #a0e4cb, #59c1bd);
   }
   100% {
-    background: linear-gradient(360deg, #ff8b8b, #b2b246, #6868ad);
+    background: linear-gradient(360deg, #cff5e7, #a0e4cb, #59c1bd);
   }
 }
